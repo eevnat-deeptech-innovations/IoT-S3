@@ -1,0 +1,44 @@
+module.exports = {
+  apps: [
+    {
+      name: 'ts101-tcp',
+      script: './index-tcp.ts',
+      interpreter: '/home/azureuser/.bun/bin/bun',
+      instances: 1,
+      exec_mode: 'fork',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '180M',
+      kill_timeout: 15000,
+      listen_timeout: 8000,
+      env: {
+        NODE_ENV: 'production',
+        TCP_PORT: '7443',
+        HOST: '0.0.0.0'
+      },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      time: true
+    },
+    {
+      name: 'ts101-http',
+      script: './index-http.ts',
+      interpreter: '/home/azureuser/.bun/bin/bun',
+      instances: 1,
+      exec_mode: 'fork',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '220M',
+      kill_timeout: 15000,
+      listen_timeout: 8000,
+      env: {
+        NODE_ENV: 'production',
+        HTTP_PORT: '8000',
+        HOST: '0.0.0.0'
+      },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      time: true
+    }
+  ]
+};
