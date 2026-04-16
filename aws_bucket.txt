@@ -1,0 +1,26 @@
+# Server Configuration
+TCP_PORT=7443
+HTTP_PORT=8000
+HOST=0.0.0.0
+
+# MongoDB Configuration
+MONGO_URI=mongodb+srv://eevnatadmin:OFSvy%259KkDCIAE@eevnatdb.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
+DB_NAME=telematics
+azureuser@eevnat-dash:~/eevnat-csv$ nano .env
+azureuser@eevnat-dash:~/eevnat-csv$ cat .env
+GNU nano 8.3 .env # Environment Configuration
+
+# Server Configuration
+TCP_PORT=7443
+HTTP_PORT=8000
+HOST=0.0.0.0
+
+# MongoDB Configuration
+MONGO_URI=mongodb+srv://eevnatadmin:OFSvy%259KkDCIAE@eevnatdb.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
+DB_NAME=telematics
+
+AWS_ACCESS_KEY_ID=AKIA2RG5W5U3OXMWAG6Q
+AWS_SECRET_ACCESS_KEY=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
+AWS_REGION=ap-south-1
+S3_BUCKET_NAME=telematics-data-s3-demo-bucket-724166962486-ap-south-1-an
+S3_KEY_PREFIX=raw
